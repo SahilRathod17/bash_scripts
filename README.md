@@ -60,3 +60,23 @@ $ ./first.sh
 [🔝 Go to top](#table-of-content)
 
 ### Variables
+
+<p>A bash variable acts as temporary storage for a string or a number. Bash variables are prevalent when it comes to bash scripting. Variables also make it easy for users to write complex functions and perform various operations. Users can create variables by giving them a name and a value. A name can be anything.</p>
+
+🔹 Working with variables
+
+ <p>A variable is a temporary store for a piece of information. There are two actions we may perform for variables.</p>
+
+
+ * Setting a value for a variable.
+ * Reading or using the value for a variable.
+
+ <pre>To assign a variable we use = sign, VariableName=Value</pre>
+ <pre>To read/access the valu of variable we use $VariableName</pre>
+  <details><summary>Example</summary>
+ <br>
+   <img src="https://github.com/SahilRathod17/bash_scripts/assets/110122808/5f40699b-2ee2-4698-b92b-d08fd3436e08">
+ </details>
+
+ [🔝 Go to top](#table-of-content)
+ [🔝 Up](#introduction)
