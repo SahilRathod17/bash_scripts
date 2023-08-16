@@ -80,3 +80,47 @@ $ ./first.sh
 
  [🔝 Go to top](#table-of-content)
  [🔝 Up](#introduction)
+
+
+ ### System Variables
+
+ <p>There are some other variables that the system sets for you to use as well. Also kown as Shell Variables.</p>
+
+ | Variable | Description |
+ | -------- | ----------- |
+ | $0 | Name of the bash script. ( File name ) |
+ | $1 - $9 | First nine arguments to the bash script |
+ | $# | Tells how many arguments were passed to the bash script. |
+ | $@ | All the arguments were passed to the bash script. |
+ | $? | Exit status of the most recently run process |
+ | $$ | Process ID of the current script |
+ | $USER | Username of the current user. |
+ | $HOSTNAME | Hostname of the machine. |
+ | $SECONDS | Number of seconds since the script started. |
+ | $RANDOME | return randome number. |
+
+ 🔹 Command-line Arguments
+
+  <p>Command-line arguments are parameters that are passed to a script while executing them in the bash shell.</p>
+
+  <p>Command-line arguments help make scripts interactive for the users. They help a script identify the data it needs to operate on</p>
+
+  ```
+  #!/bin/bash
+  echo "Hello, $0"
+  echo "I am $1 bash $2."
+  echo "Let's talk about command line arguments."
+  echo "The complete list of arguments is $@"
+  echo "Total Number of Parameters: $#"
+  echo "The process ID is $$"
+  echo "Exit code for the script: $?"
+  ```
+
+  ```
+  $ ./everyone.sh learning scripting
+  ```
+
+  ![cla](https://github.com/SahilRathod17/bash_scripts/assets/110122808/070bd12c-c4bf-4715-a332-7054b3d9e330)
+
+ [🔝 Go to top](#table-of-content)
+ [🔝 Up](#variables)
