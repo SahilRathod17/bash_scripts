@@ -1,8 +1,8 @@
 ### Table of content
 
 * [Introduction](#introduction)
-* [Variables](#Variables)
-* [System Variables](#System-Variables)
+* [Variables](#variables)
+* [System Variables](#system-variables)
 * [Quotes](#Quotes)
 * [User Input](#User-Input)
 * [If Statements](#If-Statements)
@@ -18,6 +18,7 @@
 <p> A Bash script is a plain text file which contains a series of commands. These commands are a mixture of commands we would normally type ourselves on the command line (for example cd or pwd) and commands we could type on the command line but generally wouldn't.</p>
 
 🔹 First script
+
  <p> Open any text editor you are familiar (for example vi editor) with. It is convention to give files that are Bash Scripts an extension of .sh (here first.sh for example) </p>
 
  ```
@@ -39,5 +40,23 @@ echo "Hello World"
 * Line 3 :
     - echo command will print the message on the screen. we can use this command on command-line and it will behave exactly the same.
 
+🔹 Executing Script
+
+ ```
+$ sh first.sh
+ ```
+<br>
+
+```
+$ chmod +x first.sh
+$ ./first.sh
+```
+
+ <details><summary>Example</summary>
+ <br>
+   <img src="https://github.com/SahilRathod17/bash_scripts/assets/110122808/f2cf3aad-d055-4668-8136-41d319050a85">
+ </details>
 
 [🔝 Go to top](#table-of-content)
+
+### Variables
