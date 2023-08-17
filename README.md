@@ -3,7 +3,7 @@
 * [Introduction](#introduction)
 * [Variables](#variables)
 * [System Variables](#system-variables)
-* [Quotes](#Quotes)
+* [Quotes](#quotes)
 * [User Input](#User-Input)
 * [If Statements](#If-Statements)
 * [Operators](#Operators)
@@ -13,7 +13,7 @@
 * [Sample Scripts](#Sample-Scripts)
 
 
-### Introduction 
+## Introduction 
 
 <p> A Bash script is a plain text file which contains a series of commands. These commands are a mixture of commands we would normally type ourselves on the command line (for example cd or pwd) and commands we could type on the command line but generally wouldn't.</p>
 
@@ -59,7 +59,7 @@ $ ./first.sh
 
 [🔝 Go to top](#table-of-content)
 
-### Variables
+## Variables
 
 <p>A bash variable acts as temporary storage for a string or a number. Bash variables are prevalent when it comes to bash scripting. Variables also make it easy for users to write complex functions and perform various operations. Users can create variables by giving them a name and a value. A name can be anything.</p>
 
@@ -82,7 +82,7 @@ $ ./first.sh
  [🔝 Up](#introduction)
 
 
- ### System Variables
+ ## System Variables
 
  <p>There are some other variables that the system sets for you to use as well. Also kown as Shell Variables.</p>
 
@@ -124,3 +124,5 @@ $ ./first.sh
 
  [🔝 Go to top](#table-of-content)
  [🔝 Up](#variables)
+
+ ## Quotes
