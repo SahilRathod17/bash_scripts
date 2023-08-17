@@ -58,6 +58,7 @@ $ ./first.sh
  </details>
 
 [🔝 Go to top](#table-of-content)
+[🔝 Up](#introduction)
 
 ## Variables
 
@@ -79,7 +80,7 @@ $ ./first.sh
  </details>
 
  [🔝 Go to top](#table-of-content)
- [🔝 Up](#introduction)
+ [🔝 Up](#variables)
 
 
  ## System Variables
@@ -123,7 +124,7 @@ $ ./first.sh
   ![cla](https://github.com/SahilRathod17/bash_scripts/assets/110122808/070bd12c-c4bf-4715-a332-7054b3d9e330)
 
  [🔝 Go to top](#table-of-content)
- [🔝 Up](#variables)
+ [🔝 Up](#system-variables)
 
  ## Quotes
 
@@ -142,7 +143,7 @@ $ ./first.sh
  ![quotes3](https://github.com/SahilRathod17/bash_scripts/assets/110122808/e74fb5c7-6a47-40a7-9c2f-3477d6f3eb14)
 
  [🔝 Go to top](#table-of-content)
- [🔝 Up](#system-variables)
+ [🔝 Up](#quotes)
 
  ## User Input
 
@@ -190,7 +191,7 @@ $ ./first.sh
 Let's understand if-else statement used in this script.
 
  [🔝 Go to top](#table-of-content)
- [🔝 Up](#quotes)
+ [🔝 Up](#user-input)
  
 
 ## If Statements
@@ -228,5 +229,7 @@ Anything between then and fi ( if backwards ) will be executed only if the condi
  ```
 
  [🔝 Go to top](#table-of-content)
- [🔝 Up](#user-input)
+ [🔝 Up](#if-statement)
+
+ 
  
