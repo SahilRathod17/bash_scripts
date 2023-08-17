@@ -4,8 +4,8 @@
 * [Variables](#variables)
 * [System Variables](#system-variables)
 * [Quotes](#quotes)
-* [User Input](#User-Input)
-* [If Statements](#If-Statements)
+* [User Input](#user-input)
+* [If Statements](#if-statements)
 * [Operators](#Operators)
 * [Loops](#Loops)
 * [Practicing Scripts](#Sample-Scripts)
@@ -126,3 +126,107 @@ $ ./first.sh
  [🔝 Up](#variables)
 
  ## Quotes
+
+ <p>Storing a single word in a variable works fine without quotes, but if we want to store a sentence and also want to store special charachters like $,%,@,etc our normal variable assignment will not work.</p>
+ 
+ ![quotes](https://github.com/SahilRathod17/bash_scripts/assets/110122808/9751d23b-bd17-49c2-8f24-6b6b03fddc99)
+
+ <p>When we want variables to store more complex values however, we need to make use of quotes. This is because under normal circumstances Bash uses a space to determine separate items.</p>
+ <p>When we enclose our content in quotes we are indicating to Bash that the contents should be considered as a single item. You may use single (') or double quotes ("). Single quotes will treat every character litrally.</p>
+ <p>Double quotes will allow you to do substitution (That is include variables within the setting of the value).</p>
+ 
+ ![quotes2](https://github.com/SahilRathod17/bash_scripts/assets/110122808/e3ed346b-52cf-459b-b973-08425830e7a8)
+
+ 🔹 Command Substitution
+
+ ![quotes3](https://github.com/SahilRathod17/bash_scripts/assets/110122808/e74fb5c7-6a47-40a7-9c2f-3477d6f3eb14)
+
+ [🔝 Go to top](#table-of-content)
+ [🔝 Up](#system-variables)
+
+ ## User Input
+
+ 🔹 Asking user for input
+
+ Taking input from the user while executing the script, storing it into a variable and then 
+ using that variable in our script. We woulde be taking inputs from user like usernames, 
+ passwords or confirmation y/n to do this we use command called `read`. This cammand takes the  input and will save it into a variable.
+
+ ```
+ #!/bin/bash
+ echo "Enter your name"
+ read name
+ echo "Hello, $name."
+ ```
+
+ <details><summary>Output</summary>
+ <br>
+   <img src="https://github.com/SahilRathod17/bash_scripts/assets/110122808/c181de1b-cdb6-47ee-9200-ef31de028028">
+ </details>
+
+🔹 Example
+
+ Two commonly used options are -p which allows you to specify a prompt and -s which makes the 
+ input silent. This can make it easy to ask for a username and password combination like the 
+ example below :
+
+ ```
+ #!/bin/bash
+ echo "Enter your name"
+ read -p 'name:' username
+ echo "Enter your password"
+ read -sp 'password:' userpassword
+ echo
+ if [ $userpassword == 'pass' ]; then
+         echo "Welcome to server $username."
+ else
+         echo "Your password is not correct."
+ fi
+ ```
+
+
+ ![sp](https://github.com/SahilRathod17/bash_scripts/assets/110122808/6cfedddf-4a1d-40d6-b650-feb9c4f58775)
+
+Let's understand if-else statement used in this script.
+
+ [🔝 Go to top](#table-of-content)
+ [🔝 Up](#quotes)
+ 
+
+## If Statements
+
+- Decision makeing statements.
+- If you use bash for scripting you will undoubtedly have to use conditions a lot. Based on condition you decide if you should execute some commands on the system or not. A basic if statement effectively says, if a particular test is true, then perform a given set of actions. If it is not true then don't perform those actions or perform some other actions.
+
+```
+if[ <condition> ]; then
+    <perform-this>
+else
+    <perform-other>
+fi
+```
+
+Anything between then and fi ( if backwards ) will be executed only if the condition (between the square brackets) is true.
+
+![if](https://github.com/SahilRathod17/bash_scripts/assets/110122808/3cc3296c-7985-4f13-a6be-028bb3d491c5)
+
+
+🔹 Example
+
+ ```
+  #!/bin/bash
+  echo "Enter your name"
+  read -p 'name:' username
+  echo "Enter your password"
+  read -sp 'password:' userpassword
+  echo
+  if [ $userpassword == 'pass' ]; then
+          echo "Welcome to server $username."
+  else
+          echo "Your password is not correct."
+  fi
+ ```
+
+ [🔝 Go to top](#table-of-content)
+ [🔝 Up](#user-input)
+ 
