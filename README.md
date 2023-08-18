@@ -53,8 +53,9 @@ $ ./first.sh
 
  <details><summary>Example</summary>
  <br>
-   <img src="https://github.com/SahilRathod17/bash_scripts/assets/110122808/f2cf3aad-d055-4668-8136-41d319050a85">
+   <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/7790dde4-b4c7-4caa-88a0-437df4d6f8cd">
  </details>
+
 
 [🔝 Go to top](#table-of-content)
 [🔝 Up](#introduction)
@@ -75,10 +76,11 @@ $ ./first.sh
  <pre>To read/access the valu of variable we use $VariableName</pre>
   <details><summary>Example</summary>
  <br>
-   <img src="https://github.com/SahilRathod17/bash_scripts/assets/110122808/5f40699b-2ee2-4698-b92b-d08fd3436e08">
+   <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/983af9e6-9453-4e5f-9e81-075401a32d48">
  </details>
 
  [🔝 Go to top](#table-of-content)
+
  [🔝 Up](#variables)
 
 
@@ -120,28 +122,31 @@ $ ./first.sh
   $ ./everyone.sh learning scripting
   ```
 
-  ![cla](https://github.com/SahilRathod17/bash_scripts/assets/110122808/070bd12c-c4bf-4715-a332-7054b3d9e330)
+  ![cla](https://github.com/SahilRathod17/bash_scripting/assets/110122808/391565ae-ee24-429c-8f06-651b2d342479)
 
  [🔝 Go to top](#table-of-content)
+
  [🔝 Up](#system-variables)
 
  ## Quotes
 
  <p>Storing a single word in a variable works fine without quotes, but if we want to store a sentence and also want to store special charachters like $,%,@,etc our normal variable assignment will not work.</p>
  
- ![quotes](https://github.com/SahilRathod17/bash_scripts/assets/110122808/9751d23b-bd17-49c2-8f24-6b6b03fddc99)
+ ![quotes](https://github.com/SahilRathod17/bash_scripting/assets/110122808/51a8a50f-3578-4488-aa5c-b4dbb8792070)
 
  <p>When we want variables to store more complex values however, we need to make use of quotes. This is because under normal circumstances Bash uses a space to determine separate items.</p>
  <p>When we enclose our content in quotes we are indicating to Bash that the contents should be considered as a single item. You may use single (') or double quotes ("). Single quotes will treat every character litrally.</p>
  <p>Double quotes will allow you to do substitution (That is include variables within the setting of the value).</p>
  
- ![quotes2](https://github.com/SahilRathod17/bash_scripts/assets/110122808/e3ed346b-52cf-459b-b973-08425830e7a8)
+ ![quotes2](https://github.com/SahilRathod17/bash_scripting/assets/110122808/a2649993-d0b9-4ada-9b12-ff3d351f11df)
 
  🔹 Command Substitution
 
- ![quotes3](https://github.com/SahilRathod17/bash_scripts/assets/110122808/e74fb5c7-6a47-40a7-9c2f-3477d6f3eb14)
+
+ ![quotes3](https://github.com/SahilRathod17/bash_scripting/assets/110122808/0ca9d06d-2c67-4bb4-a57c-be9b73b7bd8f)
 
  [🔝 Go to top](#table-of-content)
+
  [🔝 Up](#quotes)
 
  ## User Input
@@ -160,8 +165,9 @@ $ ./first.sh
  ```
 
  <details><summary>Output</summary>
+
  <br>
-   <img src="https://github.com/SahilRathod17/bash_scripts/assets/110122808/c181de1b-cdb6-47ee-9200-ef31de028028">
+   <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/f5b0f028-f5df-436b-9e60-31734481e3d2">
  </details>
 
 🔹 Example
@@ -185,9 +191,10 @@ $ ./first.sh
  ```
 
 
- ![sp](https://github.com/SahilRathod17/bash_scripts/assets/110122808/6cfedddf-4a1d-40d6-b650-feb9c4f58775)
+ ![sp](https://github.com/SahilRathod17/bash_scripting/assets/110122808/4f5f1427-645d-4722-ac93-98fc6a0d22fd)
 
 Let's understand if-else statement used in this script.
+
 
  [🔝 Go to top](#table-of-content)
  [🔝 Up](#user-input)
@@ -208,10 +215,11 @@ fi
 
 Anything between then and fi ( if backwards ) will be executed only if the condition (between the square brackets) is true.
 
-![if](https://github.com/SahilRathod17/bash_scripts/assets/110122808/3cc3296c-7985-4f13-a6be-028bb3d491c5)
+![if](https://github.com/SahilRathod17/bash_scripting/assets/110122808/fa3faa1c-8247-4d5b-97e5-0d0fabedd51d)
 
 
 🔹 Example
+
 
  ```
   #!/bin/bash
@@ -370,10 +378,11 @@ echo
 $cmd
 echo
 echo "-----------------------------------------------------------------------------"
+
 ```
 <details><summary>Output</summary>
 <br>
-  <img src="https://github.com/SahilRathod17/bash_scripts/assets/110122808/521b8d33-a296-4915-9730-14f0b43485fc">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/e7376c62-3707-4475-9551-902e327b90b2">
 </details>
 </details>
 
@@ -420,9 +429,10 @@ echo "--------------------------------------------------------------------------
 ```
 <details><summary>Output</summary>
 <br>
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/a65452c3-4e6c-4742-bdd3-abf0a6fd47ff">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/4f21fcfa-bf27-4ff3-a5ed-0053b7beeb88">
 </details>
 </details>
+
 
 <details><summary>3. This script is updated version of previous calculator script, using while loop and switch statement.</summary>
 <br>
@@ -475,8 +485,9 @@ done
 ```
 <details><summary>Output</summary>
 <br>
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/b55f1232-4d3d-40fc-a2e4-314996885256">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/e93123de-1acc-4a90-8c87-8a8ed1aede8b">
 </details>
+
 </details>
 
 <details><summary>4. This script finds the largest number among the 3 given numbers.</summary>
@@ -509,9 +520,10 @@ echo "--------------------------------------------------------------------------
 ```
 <details><summary>Output</summary>
 <br>
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/7f8e1b46-6c57-4472-a5df-5a81a88b1326">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/9d784c31-7157-4da3-b49e-dfa693b5b81d">
 </details>
 </details>
+
 
 <details><summary>5. This script finds the factorial of a given number.</summary>
 <br>
@@ -546,9 +558,10 @@ echo "--------------------------------------------------------------------------
 ```
 <details><summary>Output</summary>
 <br>
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/a24b9f57-58a7-4972-8b98-894be403e195">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/9ed67dee-50c3-4211-ba53-f7c167e646d0">
 </details>
 </details>
+
 
 <details><summary>6. This script prints all prime numbers from 1 to n.</summary>
 <br>
@@ -584,9 +597,10 @@ done
 ```
 <details><summary>Output</summary>
 <br>
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/3152f149-c0f1-46e6-8226-f190eda21491">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/b737c2d6-77f8-4cb2-9ed6-7a22e9279914">
 </details>
 </details>
+
 
 <details><summary>7. This script reverse a number supplied by user.</summary>
 <br>
@@ -626,13 +640,14 @@ fi
 ```
 <details><summary>Output</summary>
 <br>
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/f1b35ad7-3044-43a7-aa7b-3c79c17af3d1">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/c7d51147-3668-4a67-9bae-c96db3c50af4">
 </details>
 </details>
 
 <details><summary>8. This script Displays a list of files in the current directory with read, write, and execute permissions.</summary>
 <br>
   
+
 ```
 #!/bin/bash
 
@@ -654,13 +669,15 @@ echo "-------------------------------------------------------------"
 <br>
 
  * All the files with permissions.
- <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/23695db1-08f1-4401-bb70-3573cee51152">
+ <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/80223fdc-d674-4e6a-b1bd-c876e2cd4474">
  <br>
 
+
  * Running our script to get name of scripts which have all read, write and execute permissions.
- <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/5d10e664-4b5f-478e-847e-ddb9347d2b4e"> 
+ <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/9ddd095f-2f25-406d-8440-392e59eb0db2"> 
 </details>
 </details>
+
 
 
 <details><summary>9. This script deletes all the files in the current directory which are 0 bytes in length.</summary>
@@ -686,13 +703,14 @@ echo "---------------------------------------------------------------"
 <br>
   
   * Creating empty files.
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/01452c9c-b20e-4f9e-9a81-822f4f22c7f3">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/eed31cd7-850a-4e8c-a416-68adffa41d98">
   <br>
   
   * Running our script.
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/a0cc7044-74a9-4d1b-8b1c-9c70010cf2ec">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/254b938f-e284-40c0-8a7b-1c949cdb1258">
 </details>
 </details>
+
 
 <details><summary>10. This script greets the user by saying good morning, good afternoon or good evening according to the system time.</summary>
 <br>
@@ -723,9 +741,10 @@ echo
 ```
 <details><summary>Output</summary>
 <br>
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/de771a59-f70b-4dff-9857-3cdccc39c433">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/5ba2b0ea-0200-46cb-9100-b4dc27d17acc">
 </details>
 </details>
+
 
 <details><summary>11. This script will display system up time, memory utilization & disk utilization.</summary>
 <br>
@@ -756,9 +775,10 @@ echo
 ```
 <details><summary>Output</summary>
 <br>
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/cc3fe7ce-8839-4973-b96e-b712c4824e60">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/e2ec4fb9-60dc-4482-a99b-0f5d71c28def">
 </details>
 </details>
+
 
 
 <details><summary>12. This script finds total number of users and tells how many of them are currently logged in.</summary>
@@ -784,9 +804,10 @@ echo "----------------------------------------------------------------------"
 ```
 <details><summary>Output</summary>
 <br>
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/237282f5-112b-4546-b7d1-61f3f1b1d8b5">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/2ad63721-31e0-452b-98b6-4710e6f632ee">
 </details>
 </details>
+
 
 <details><summary>13. This script prints available RAM, Current load & free ROOT partiotion.</summary>
 <br>
@@ -813,9 +834,10 @@ echo
 ```
 <details><summary>Output</summary>
 <br>
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/d15c4895-fc71-4fb9-bffe-cd959d770ab7">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/c9550f6a-df7d-46c5-b6ff-4e822df93fea">
 </details>
 </details>
+
 
 
 <details><summary>14. This script monitors the apache process. starts the service if not running.</summary>
@@ -855,12 +877,13 @@ fi
 ```
 <details><summary>Output</summary>
 <br>
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/188cb7f9-b0a9-4c00-a75d-de4061eb3dc2">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/0dd27cb0-7a4d-4e54-aa3c-b40f8421a6ce">
   <br>
+
 
   * we can automate this script with the help of crontab.
 
-  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/e4088e60-4a14-4993-a902-584e331ee01a">
+  <img src="https://github.com/SahilRathod17/bash_scripting/assets/110122808/30bffab2-d539-4dd3-aa97-33625881aaad">
 </details>
 </details>
 
