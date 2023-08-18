@@ -261,4 +261,60 @@ Anything between then and fi ( if backwards ) will be executed only if the condi
 
  ## Loops
 
+ <p>Loops allow us to took a series of commands and keep rerunning them until a particular situation is reached. they are useful for automating repetitive tasks.</p>
+
  
+🔹 For Loop
+
+ A `for loop` is bash programming language statement which allows code to be repeatedly executed. A for loop is classified as an iteration statement i.e. it is repetition of a process within a bash script. For example, you can run Linux command or task 5 times or read and process list of files using a for loop. A for loop can be used at a shell prompt or within a shell script itself.
+
+```
+for var in <list>
+do
+<commands>
+done
+```
+
+The `for loop` will take each item in the list ( in order, one after the other), assign that item as the value of the variable var, execute the commands between do and done then go back to the top, grab the next item in the list and repeat over. The list is defined as a series of strings, separated by spaces.
+
+🔹 Example
+
+ The content of $var is printed three time.
+
+ ```
+ #!/bin/bash
+ for var in {1..3}
+ do
+ echo "$var"
+ done
+ ```
+
+ Or write it the `traditional for loop` way :
+
+ ```
+ for((a=1; a<=3; a++))
+ do
+ echo $a
+ done
+ ```
+
+ They can also be used to act on files.
+
+ This will run the command `cat` on `file1` and `file2`
+
+ ```
+ for var in file1 file2
+ do
+ cat "$var"
+ done
+ ```
+
+ or the output from a command. This will cat the output from ls.
+
+ ```
+ for op in $(ls)
+ do
+ cat "$op"
+ done
+ ```
+
