@@ -10,7 +10,6 @@
 * [Loops](#loops)
 * [Practicing Scripts](#practicing-scripts)
 * [Real Time Use Case](#real-time-use-case)
-* [Sample Scripts](#sample-scripts)
 
 
 ## Introduction 
