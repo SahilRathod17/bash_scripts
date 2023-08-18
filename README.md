@@ -1,1 +1,360 @@
-# bash_scripts
+### Table of content
+
+* [Introduction](#introduction)
+* [Variables](#variables)
+* [System Variables](#system-variables)
+* [Quotes](#quotes)
+* [User Input](#user-input)
+* [If Statements](#if-statements)
+* [Operators](#operators)
+* [Loops](#loops)
+* [Practicing Scripts](#practicing-scripts)
+* [Real Time Use Case](#real-time-use-case)
+* [Sample Scripts](#sample-scripts)
+
+
+## Introduction 
+
+<p> A Bash script is a plain text file which contains a series of commands. These commands are a mixture of commands we would normally type ourselves on the command line (for example cd or pwd) and commands we could type on the command line but generally wouldn't.</p>
+
+🔹 First script
+
+ <p> Open any text editor you are familiar (for example vi editor) with. It is convention to give files that are Bash Scripts an extension of .sh (here first.sh for example) </p>
+
+ ```
+ $ vi first.sh
+ ```
+ <br>
+ 
+ ```
+#!/bin/bash
+# First script
+echo "Hello World"
+ ```
+* Line 1 :
+  - #! is called as the SHEBANG character, it tells the script to interpret the rest of the lines with an Interpreter /bin/bash. so, if we change to /usr/bin/python then it tells the script to use python interpreter.
+
+* Line 2 :
+    - This is comment. Anything after # is not executed ( same as # in python ). It is for our refrence. it is used so that we can define what this script exactly does.
+
+* Line 3 :
+    - echo command will print the message on the screen. we can use this command on command-line and it will behave exactly the same.
+
+🔹 Executing Script
+
+ ```
+$ sh first.sh
+ ```
+<br>
+
+```
+$ chmod +x first.sh
+$ ./first.sh
+```
+
+ <details><summary>Example</summary>
+ <br>
+   <img src="https://github.com/SahilRathod17/bash_scripts/assets/110122808/f2cf3aad-d055-4668-8136-41d319050a85">
+ </details>
+
+[🔝 Go to top](#table-of-content)
+[🔝 Up](#introduction)
+
+## Variables
+
+<p>A bash variable acts as temporary storage for a string or a number. Bash variables are prevalent when it comes to bash scripting. Variables also make it easy for users to write complex functions and perform various operations. Users can create variables by giving them a name and a value. A name can be anything.</p>
+
+🔹 Working with variables
+
+ <p>A variable is a temporary store for a piece of information. There are two actions we may perform for variables.</p>
+
+
+ * Setting a value for a variable.
+ * Reading or using the value for a variable.
+
+ <pre>To assign a variable we use = sign, VariableName=Value</pre>
+ <pre>To read/access the valu of variable we use $VariableName</pre>
+  <details><summary>Example</summary>
+ <br>
+   <img src="https://github.com/SahilRathod17/bash_scripts/assets/110122808/5f40699b-2ee2-4698-b92b-d08fd3436e08">
+ </details>
+
+ [🔝 Go to top](#table-of-content)
+ [🔝 Up](#variables)
+
+
+ ## System Variables
+
+ <p>There are some other variables that the system sets for you to use as well. Also kown as Shell Variables.</p>
+
+ | Variable | Description |
+ | -------- | ----------- |
+ | $0 | Name of the bash script. ( File name ) |
+ | $1 - $9 | First nine arguments to the bash script |
+ | $# | Tells how many arguments were passed to the bash script. |
+ | $@ | All the arguments were passed to the bash script. |
+ | $? | Exit status of the most recently run process |
+ | $$ | Process ID of the current script |
+ | $USER | Username of the current user. |
+ | $HOSTNAME | Hostname of the machine. |
+ | $SECONDS | Number of seconds since the script started. |
+ | $RANDOME | return randome number. |
+
+ 🔹 Command-line Arguments
+
+  <p>Command-line arguments are parameters that are passed to a script while executing them in the bash shell.</p>
+
+  <p>Command-line arguments help make scripts interactive for the users. They help a script identify the data it needs to operate on</p>
+
+  ```
+  #!/bin/bash
+  echo "Hello, $0"
+  echo "I am $1 bash $2."
+  echo "Let's talk about command line arguments."
+  echo "The complete list of arguments is $@"
+  echo "Total Number of Parameters: $#"
+  echo "The process ID is $$"
+  echo "Exit code for the script: $?"
+  ```
+
+  ```
+  $ ./everyone.sh learning scripting
+  ```
+
+  ![cla](https://github.com/SahilRathod17/bash_scripts/assets/110122808/070bd12c-c4bf-4715-a332-7054b3d9e330)
+
+ [🔝 Go to top](#table-of-content)
+ [🔝 Up](#system-variables)
+
+ ## Quotes
+
+ <p>Storing a single word in a variable works fine without quotes, but if we want to store a sentence and also want to store special charachters like $,%,@,etc our normal variable assignment will not work.</p>
+ 
+ ![quotes](https://github.com/SahilRathod17/bash_scripts/assets/110122808/9751d23b-bd17-49c2-8f24-6b6b03fddc99)
+
+ <p>When we want variables to store more complex values however, we need to make use of quotes. This is because under normal circumstances Bash uses a space to determine separate items.</p>
+ <p>When we enclose our content in quotes we are indicating to Bash that the contents should be considered as a single item. You may use single (') or double quotes ("). Single quotes will treat every character litrally.</p>
+ <p>Double quotes will allow you to do substitution (That is include variables within the setting of the value).</p>
+ 
+ ![quotes2](https://github.com/SahilRathod17/bash_scripts/assets/110122808/e3ed346b-52cf-459b-b973-08425830e7a8)
+
+ 🔹 Command Substitution
+
+ ![quotes3](https://github.com/SahilRathod17/bash_scripts/assets/110122808/e74fb5c7-6a47-40a7-9c2f-3477d6f3eb14)
+
+ [🔝 Go to top](#table-of-content)
+ [🔝 Up](#quotes)
+
+ ## User Input
+
+ 🔹 Asking user for input
+
+ Taking input from the user while executing the script, storing it into a variable and then 
+ using that variable in our script. We woulde be taking inputs from user like usernames, 
+ passwords or confirmation y/n to do this we use command called `read`. This cammand takes the  input and will save it into a variable.
+
+ ```
+ #!/bin/bash
+ echo "Enter your name"
+ read name
+ echo "Hello, $name."
+ ```
+
+ <details><summary>Output</summary>
+ <br>
+   <img src="https://github.com/SahilRathod17/bash_scripts/assets/110122808/c181de1b-cdb6-47ee-9200-ef31de028028">
+ </details>
+
+🔹 Example
+
+ Two commonly used options are -p which allows you to specify a prompt and -s which makes the 
+ input silent. This can make it easy to ask for a username and password combination like the 
+ example below :
+
+ ```
+ #!/bin/bash
+ echo "Enter your name"
+ read -p 'name:' username
+ echo "Enter your password"
+ read -sp 'password:' userpassword
+ echo
+ if [ $userpassword == 'pass' ]; then
+         echo "Welcome to server $username."
+ else
+         echo "Your password is not correct."
+ fi
+ ```
+
+
+ ![sp](https://github.com/SahilRathod17/bash_scripts/assets/110122808/6cfedddf-4a1d-40d6-b650-feb9c4f58775)
+
+Let's understand if-else statement used in this script.
+
+ [🔝 Go to top](#table-of-content)
+ [🔝 Up](#user-input)
+ 
+
+## If Statements
+
+- Decision makeing statements.
+- If you use bash for scripting you will undoubtedly have to use conditions a lot. Based on condition you decide if you should execute some commands on the system or not. A basic if statement effectively says, if a particular test is true, then perform a given set of actions. If it is not true then don't perform those actions or perform some other actions.
+
+```
+if[ <condition> ]; then
+    <perform-this>
+else
+    <perform-other>
+fi
+```
+
+Anything between then and fi ( if backwards ) will be executed only if the condition (between the square brackets) is true.
+
+![if](https://github.com/SahilRathod17/bash_scripts/assets/110122808/3cc3296c-7985-4f13-a6be-028bb3d491c5)
+
+
+🔹 Example
+
+ ```
+  #!/bin/bash
+  echo "Enter your name"
+  read -p 'name:' username
+  echo "Enter your password"
+  read -sp 'password:' userpassword
+  echo
+  if [ $userpassword == 'pass' ]; then
+          echo "Welcome to server $username."
+  else
+          echo "Your password is not correct."
+  fi
+ ```
+
+ [🔝 Go to top](#table-of-content)
+ [🔝 Up](#if-statements)
+
+ 
+ ## Operators
+
+ | Operator | Description |
+ | -------- | ----------- |
+ | ! EXPRESSION | The EXPRESSION is false. |
+ | -n STRING | The length of the STRING is greater than zero. |
+ | -z STRING | The length of STRING is zero ( ie it is empty ) |
+ | STRING1 = STRING2 | STRING1 is equal to STRING2 |
+ | STRING1 != STRING2 | STRING1 is not equal to STRING2 |
+ | INTEGER1 -ge INTEGER2 | INTEGER1 is numerically greater than INTEGER2 |
+ | INTEGER1 -le INTEGER2 | INTEGER1 is numerically less than INTEGER2 |
+ | INTEGER1  -eq INTEGER2 | INTEGER1 is numerically equal to INTEGER2 |
+ | -d FILE | FILE exists and is a directory. |
+ | -e FILE | FILE exists. |
+ | -r FILE | FILE exists and the read permission is granted. |
+ | -w FILE | FILE exists and the write permission is granted. |
+ | -x FILE | FILE exists and the execute permission is granted. |
+ | s FILE | FILE exists and it's size is greater than zero ( ie. it's non-empty ). |
+
+ 
+ * = is slightly different to -eq. [ 001 = 1 ] will return false as = does a string comparison (ie. character for character the same) whereas -eq does a numerical comparison meaning [ 001 -eq 1 ] will return true.
+ * When we refer to FILE above we are actually meaning a path. Remember that a path may be absolute or relative and may refer to a file or a firectory.
+
+ [🔝 Go to top](#table-of-content)
+ [🔝 Up](#operators)
+
+
+ ## Loops
+
+ <p>Loops allow us to took a series of commands and keep rerunning them until a particular situation is reached. they are useful for automating repetitive tasks.</p>
+
+ 
+🔹 For Loop
+
+ A `for loop` is bash programming language statement which allows code to be repeatedly executed. A for loop is classified as an iteration statement i.e. it is repetition of a process within a bash script. For example, you can run Linux command or task 5 times or read and process list of files using a for loop. A for loop can be used at a shell prompt or within a shell script itself.
+
+* Syntax :
+
+```
+for var in <list>
+do
+<commands>
+done
+```
+
+The `for loop` will take each item in the list ( in order, one after the other), assign that item as the value of the variable var, execute the commands between do and done then go back to the top, grab the next item in the list and repeat over. The list is defined as a series of strings, separated by spaces.
+
+🔹 Example
+
+ The content of $var is printed three time.
+
+ ```
+ #!/bin/bash
+ for var in {1..3}
+ do
+ echo "$var"
+ done
+ ```
+
+ Or write it the `traditional for loop` way :
+
+ ```
+ for((a=1; a<=3; a++))
+ do
+ echo $a
+ done
+ ```
+
+ They can also be used to act on files.
+
+ This will run the command `cat` on `file1` and `file2`
+
+ ```
+ for var in file1 file2
+ do
+ cat "$var"
+ done
+ ```
+
+ or the output from a command. This will cat the output from ls.
+
+ ```
+ for op in $(ls)
+ do
+ cat "$op"
+ done
+ ```
+
+ 🔹 For Loop 
+
+  The bash `while loop` is a control flow statement that allows code or commands to be 
+  executed repeatedly based on a given condition. For example, run echo command 5 times or 
+  read text file line by line or evaluate the options passed on the command line for a script.
+
+  * Syntax :
+
+  ```
+  while[ condition ]
+  do
+  command1
+  command2
+  command3
+  command4
+  done
+  ```
+
+  command1 to command4 will be executed repeatedly til condition us true. The argument for a 
+  while loop can be any boolean expression. Infinite loops occur when the condition never 
+  evaluates to false. For example, For example, following while loop will print hello 5 times 
+  on screen.
+
+  ```
+  #!/bin/bash
+  a=1
+  while[ $a -le 5 ]
+  do
+  echo "$a Hello"
+  x=$(( $x + 1 ))
+  done
+  ```
+
+ [🔝 Go to top](#table-of-content)
+ [🔝 Up](#loops)
+ 
+  
+
