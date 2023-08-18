@@ -241,8 +241,8 @@ Anything between then and fi ( if backwards ) will be executed only if the condi
  | -z STRING | The length of STRING is zero ( ie it is empty ) |
  | STRING1 = STRING2 | STRING1 is equal to STRING2 |
  | STRING1 != STRING2 | STRING1 is not equal to STRING2 |
- | INTEGER1 -gt INTEGER2 | INTEGER1 is numerically greater than INTEGER2 |
- | INTEGER1 -lt INTEGER2 | INTEGER1 is numerically less than INTEGER2 |
+ | INTEGER1 -ge INTEGER2 | INTEGER1 is numerically greater than INTEGER2 |
+ | INTEGER1 -le INTEGER2 | INTEGER1 is numerically less than INTEGER2 |
  | INTEGER1  -eq INTEGER2 | INTEGER1 is numerically equal to INTEGER2 |
  | -d FILE | FILE exists and is a directory. |
  | -e FILE | FILE exists. |
@@ -267,6 +267,8 @@ Anything between then and fi ( if backwards ) will be executed only if the condi
 🔹 For Loop
 
  A `for loop` is bash programming language statement which allows code to be repeatedly executed. A for loop is classified as an iteration statement i.e. it is repetition of a process within a bash script. For example, you can run Linux command or task 5 times or read and process list of files using a for loop. A for loop can be used at a shell prompt or within a shell script itself.
+
+* Syntax :
 
 ```
 for var in <list>
@@ -317,4 +319,42 @@ The `for loop` will take each item in the list ( in order, one after the other),
  cat "$op"
  done
  ```
+
+ 🔹 For Loop 
+
+  The bash `while loop` is a control flow statement that allows code or commands to be 
+  executed repeatedly based on a given condition. For example, run echo command 5 times or 
+  read text file line by line or evaluate the options passed on the command line for a script.
+
+  * Syntax :
+
+  ```
+  while[ condition ]
+  do
+  command1
+  command2
+  command3
+  command4
+  done
+  ```
+
+  command1 to command4 will be executed repeatedly til condition us true. The argument for a 
+  while loop can be any boolean expression. Infinite loops occur when the condition never 
+  evaluates to false. For example, For example, following while loop will print hello 5 times 
+  on screen.
+
+  ```
+  #!/bin/bash
+  a=1
+  while[ $a -le 5 ]
+  do
+  echo "$a Hello"
+  x=$(( $x + 1 ))
+  done
+  ```
+
+ [🔝 Go to top](#table-of-content)
+ [🔝 Up](#loops)
+ 
+  
 
