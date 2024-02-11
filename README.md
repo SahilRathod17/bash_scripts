@@ -8,7 +8,7 @@
 * [If Statements](#if-statements)
 * [Operators](#operators)
 * [Loops](#loops)
-* [Practicing Scripts](#practicing-scripts)
+* [Practicing Scripts](#practicing-scripts) | [SCRIPTS](https://github.com/SahilRathod17/bash_scripting/tree/main/SCRIPTS/Practicing%20Scripts)
 * [Real Time Use Case](#real-time-use-case)
 
 
